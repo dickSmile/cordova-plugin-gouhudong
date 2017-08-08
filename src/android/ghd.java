@@ -1,4 +1,4 @@
-package com.bingding.bgou;
+package cordova-plugin-gouhudong;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -11,7 +11,7 @@ import org.json.JSONObject;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class cordova-plugin-gouhudong extends CordovaPlugin {
+public class ghd extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
