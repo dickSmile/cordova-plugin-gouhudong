@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.bingding.bgou" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-plugin-gouhudong</name>
+    <js-module name="cordova-plugin-gouhudong" src="www/cordova-plugin-gouhudong.js">
+        <clobbers target="cordova.plugins.cordova-plugin-gouhudong"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="cordova-plugin-gouhudong">
+                <param name="android-package" value="com.bingding.bgou.cordova-plugin-gouhudong"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"/>
+        <source-file src="src/android/cordova-plugin-gouhudong.java"
+                     target-dir="src/com/bingding/bgou/cordova-plugin-gouhudong"/>
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="cordova-plugin-gouhudong">
+                <param name="ios-package" value="cordova-plugin-gouhudong"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/cordova-plugin-gouhudong.m"/>
+    </platform>
+</plugin>
