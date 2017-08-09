@@ -1,30 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
-<<<<<<< HEAD
-<plugin id="cordova-plugin-gouhudong" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"><name>ghd</name><js-module name="ghd" src="www/ghd.js"><clobbers target="cordova.plugins.ghd" /></js-module><platform name="android"><config-file parent="/*" target="res/xml/config.xml"><feature name="ghd"><param name="android-package" value="cordova-plugin-gouhudong.ghd" /></feature></config-file><config-file parent="/*" target="AndroidManifest.xml"></config-file><source-file src="src/android/ghd.java" target-dir="src/cordova-plugin-gouhudong/ghd" /></platform></plugin>
-=======
-<plugin id="com.bingding.bgou" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+
+<plugin id="cordova-plugin-gouhudong" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>cordova-plugin-gouhudong</name>
-    <js-module name="cordova-plugin-gouhudong" src="www/cordova-plugin-gouhudong.js">
-        <clobbers target="cordova.plugins.cordova-plugin-gouhudong"/>
+    <name>ghd</name>
+    <js-module name="ghd" src="www/ghd.js">
+        <clobbers target="cordova.plugins.ghd"/>
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="cordova-plugin-gouhudong">
-                <param name="android-package" value="com.bingding.bgou.cordova-plugin-gouhudong"/>
+            <feature name="ghd">
+                <param name="android-package" value="cordova-plugin-gouhudong.ghd"/>
             </feature>
         </config-file>
-        <config-file parent="/*" target="AndroidManifest.xml"/>
-        <source-file src="src/android/cordova-plugin-gouhudong.java"
-                     target-dir="src/com/bingding/bgou/cordova-plugin-gouhudong"/>
-    </platform>
-    <platform name="ios">
-        <config-file parent="/*" target="config.xml">
-            <feature name="cordova-plugin-gouhudong">
-                <param name="ios-package" value="cordova-plugin-gouhudong"/>
-            </feature>
-        </config-file>
-        <source-file src="src/ios/cordova-plugin-gouhudong.m"/>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/ghd.java" target-dir="src/cordova-plugin-gouhudong/ghd"/>
     </platform>
 </plugin>
->>>>>>> 6f81662d2a3ab752b43bb6dc861bb40050726887

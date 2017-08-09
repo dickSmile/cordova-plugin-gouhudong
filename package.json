@@ -1,5 +1,5 @@
 {
-  "name": "ghd",
+  "name": "cordova-plugin-gouhudong",
   "version": "0.0.1",
   "description": "构互动插件",
   "cordova": {

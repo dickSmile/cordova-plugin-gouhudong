@@ -27,7 +27,6 @@ public class ghd extends CordovaPlugin {
 
     private void showToast(String message, CallbackContext callbackContext) {
         Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
-        callbackContext.success();
         return true;
     }
 
