@@ -1,12 +1,33 @@
 var exec = require('cordova/exec');
 
-var ghd = function () {
+var ghdPlugin = function () {
 
 }
 
-ghd.prototype.showToast = function (msg) {
-    exec(null, null, "ghd", "showToast", [msg]);
+ghdPlugin.prototype.errorCallback = function (msg) {
+    alert('ghdPlugin callback error:' + msg)
 }
+
+ghdPlugin.prototype.callNative = function (name, args, sCallback, eCallback) {
+    if (eCallback == null) {
+        exec(sCallback, this.errorCallback, 'ghd', name, args)
+    } else {
+        exec(sCallback, eCallback, 'ghd', name, args)
+    }
+}
+
+ghdPlugin.prototype.showToast = function (msg, sCallback, eCallback) {
+    this.callNative('showToast', [msg], sCallback, eCallback)
+}
+
+
+// ghdPlugin.prototype.showToast = function (msg, sCallback, eCallback) {
+//     exec(sCallback, eCallback, "ghd", "showToast", [msg]);
+// }
+//
+// ghdPlugin.prototype.coolMethod = function (msg, sCallback, eCallback) {
+//     exec(sCallback, eCallback, "ghd", "coolMethod", [msg]);
+// }
 
 // exports.coolMethod = function(arg0, success, error) {
 //     exec(success, error, "ghd", "coolMethod", [arg0]);
@@ -20,7 +41,7 @@ if (!window.plugins) {
 }
 
 if (!window.plugins.ghd) {
-    window.plugins.ghd = new ghd()
+    window.plugins.ghd = new ghdPlugin();
 }
 
-module.exports = new ghd();
+module.exports = new ghdPlugin();

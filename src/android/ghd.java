@@ -1,4 +1,4 @@
-package cordova-plugin-gouhudong;
+package cordova.plugin.gouhudong;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -20,14 +20,15 @@ public class ghd extends CordovaPlugin {
             this.coolMethod(message, callbackContext);
             return true;
         } else if (action.equals("showToast")) {
-            this.showToast(args.getString(0), callbackContext)
+            this.showToast(args.getString(0), callbackContext);
+            return true;
         }
         return false;
     }
 
     private void showToast(String message, CallbackContext callbackContext) {
-        Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
-        return true;
+        Toast.makeText(this.cordova.getActivity(), message, Toast.LENGTH_SHORT).show();
+        callbackContext.success();
     }
 
     private void coolMethod(String message, CallbackContext callbackContext) {

@@ -4,15 +4,15 @@
         xmlns:android="http://schemas.android.com/apk/res/android">
     <name>ghd</name>
     <js-module name="ghd" src="www/ghd.js">
-        <clobbers target="cordova.plugins.ghd"/>
+        <clobbers target="ghd"/>
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="ghd">
-                <param name="android-package" value="cordova-plugin-gouhudong.ghd"/>
+                <param name="android-package" value="cordova.plugin.gouhudong.ghd"/>
             </feature>
         </config-file>
-        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
-        <source-file src="src/android/ghd.java" target-dir="src/cordova-plugin-gouhudong/ghd"/>
+
+        <source-file src="src/android/ghd.java" target-dir="src/cordova/plugin/gouhudong"/>
     </platform>
 </plugin>
