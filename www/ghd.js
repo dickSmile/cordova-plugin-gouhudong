@@ -9,7 +9,7 @@ ghdPlugin.prototype.errorCallback = function (msg) {
 }
 
 ghdPlugin.prototype.callNative = function (name, args, sCallback, eCallback) {
-    if (eCallback == null) {
+    if (eCallback) {
         exec(sCallback, this.errorCallback, 'ghd', name, args)
     } else {
         exec(sCallback, eCallback, 'ghd', name, args)
